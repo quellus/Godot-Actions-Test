@@ -2,7 +2,7 @@ name: Continuous integration
 on: push
 
 env:
-  GODOT_VERSION: 3.4.2
+  GODOT_VERSION: 4.3
   EXPORT_NAME: escape-space
 
 jobs:
