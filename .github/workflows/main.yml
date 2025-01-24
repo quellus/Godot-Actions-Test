@@ -3,7 +3,7 @@ on: push
 
 env:
   GODOT_VERSION: 4.3
-  EXPORT_NAME: escape-space
+  EXPORT_NAME: GDTuber
 
 jobs:
   export-windows:
@@ -21,7 +21,7 @@ jobs:
       - name: Export (Windows)
         run: |
           mkdir -p dist/
-          godot -v --export "Windows Desktop" "dist/$EXPORT_NAME.exe"
+          godot -v --headless --export "Windows Desktop" "dist/$EXPORT_NAME.exe"
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
