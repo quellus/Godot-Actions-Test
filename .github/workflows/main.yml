@@ -3,8 +3,8 @@ on: push
 
 env:
   GODOT_VERSION: 4.3
-  EXPORT_NAME: test-project
-  PROJECT_PATH: test-project
+  EXPORT_NAME: Godot-Actions-Test
+  PROJECT_PATH: Godot-Actions-Test
 
 jobs:
   export-windows:
