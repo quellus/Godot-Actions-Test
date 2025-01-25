@@ -21,6 +21,7 @@ jobs:
         with:
           allowUpdates: true
           draft: false
+          makeLatest: true
   export-windows:
     name: Windows Export
     runs-on: ubuntu-20.04
@@ -55,7 +56,7 @@ jobs:
       - name: Upload Artifacts to Release
         uses: ncipollo/release-action@v1.15.0
         with:
-          artifacts: "build/windows"
+          artifacts: "$EXPORT_DIR/windows/$EXPORT_NAME.exe"
   export-linux:
     name: Linux Export
     runs-on: ubuntu-20.04
@@ -88,4 +89,4 @@ jobs:
       - name: Upload Artifacts to Release
         uses: ncipollo/release-action@v1.15.0
         with:
-          artifacts: "build/linux"
+          artifacts: "$EXPORT_DIR/linux/$EXPORT_NAME.x86_64"
