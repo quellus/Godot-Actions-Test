@@ -57,7 +57,7 @@ jobs:
         uses: ncipollo/release-action@v1.15.0
         with:
           allowUpdates: true
-          artifacts: "build/windows"
+          artifacts: "build/windows/*"
   export-linux:
     name: Linux Export
     runs-on: ubuntu-20.04
@@ -91,4 +91,4 @@ jobs:
         uses: ncipollo/release-action@v1.15.0
         with:
           allowUpdates: true
-          artifacts: "build/linux"
+          artifacts: "build/linux/*"
