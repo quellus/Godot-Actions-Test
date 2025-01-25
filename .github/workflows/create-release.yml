@@ -24,6 +24,10 @@ jobs:
   export-windows:
     name: Windows Export
     runs-on: ubuntu-20.04
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
     container:
       image: barichello/godot-ci:4.3
     steps:
@@ -55,6 +59,10 @@ jobs:
   export-linux:
     name: Linux Export
     runs-on: ubuntu-20.04
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
     container:
       image: barichello/godot-ci:4.3
     steps:
