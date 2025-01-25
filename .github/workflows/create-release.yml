@@ -51,7 +51,7 @@ jobs:
       - name: Upload Artifacts to Release
         uses: ncipollo/release-action@v1.15.0
         with:
-          artifacts: "build/linux"
+          artifacts: "build/windows"
   export-linux:
     name: Linux Export
     runs-on: ubuntu-20.04
@@ -77,4 +77,7 @@ jobs:
         with:
           name: linux
           path: build/linux
-
+      - name: Upload Artifacts to Release
+        uses: ncipollo/release-action@v1.15.0
+        with:
+          artifacts: "build/linux"
